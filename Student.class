@@ -1,0 +1,20 @@
+package extend.human;
+
+//StudentクラスはHumanクラスを継承する
+public class Student extends Human {
+	private int score;
+	
+//	引数にname,age,scoreを持つパブリックメソッドStudentを定義
+//	親クラス（Human)の変数name,ageを継承
+	public Student(String name, int age, int score) {
+		super(name, age);
+		this.score = score;
+	}
+	
+//	studentProfileのgetterメソッド定義
+	public String getStudentProfile() {
+		String profile = "年齢は" + super.age + "です";
+		profile += "学生で、テストの点数は" + this.score + "です";
+		return profile;
+	}
+}
