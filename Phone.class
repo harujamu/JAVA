@@ -1,0 +1,17 @@
+package extend.phone;
+
+//インターフェースclass
+public interface Phone {
+////	定数MAX_NUMBER_DIGITSを定義
+//	int MAX_NUMBER_DIGITS = 11;
+////	抽象メソッドcall定義
+//	public void call(String number);
+	
+	final int MAX_NUMBER_DIGITS = 11;
+	void call(String number);
+	
+//	defaultメソッド宣言
+	default void powerOff() {
+		System.out.println("電源を切ります");
+	}
+}
